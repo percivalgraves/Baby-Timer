@@ -14,9 +14,9 @@
   border-radius: 50%;
   background: #fff url(../images/clock.svg) no-repeat center;
   background-size: 88%;
-  height: 20em;
+  height: 45em;
   position: relative;
-  width: 20em;
+  width: 45em;
 }
 
 .clock.simple:after {
