@@ -1,3 +1,7 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
 /* Clock Face */
 .clock {
   border-radius: 50%;
