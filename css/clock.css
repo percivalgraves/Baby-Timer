@@ -71,3 +71,7 @@
 .seconds-container {
   transition: transform 0.2s cubic-bezier(.4,2.08,.55,.44);
 }
+/* Timer */
+#CountdownTimer{
+display:none;
+}
