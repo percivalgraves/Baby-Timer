@@ -1,26 +1,46 @@
+<!doctype html>
 <html>
-    <head>
-        <title>Glory Reborn</title>
-    </head>
-    <body>
+  <head>
+    <title>Glory Reborn</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/clock.css" rel="stylesheet" type="text/css">
+    <link href="css/clock-anim.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <article class="clock">
+          <div class="hours-container">
+            <div class="hours"></div>
+          </div>
+          <div class="minutes-container">
+            <div class="minutes"></div>
+          </div>
+          <div class="seconds-container">
+            <div class="seconds"></div>
+          </div>
+        </article>
+      </div>
+      <div class="row justify-content-md-center">
         <p id="CountdownTimer"></p>
+      </div>
+    </div>
+  </body>  
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/clock.js"></script>
+  <script>
+    var countDownDate =  new Date("July 16, 2018 10:45:00").getTime();
+    var x = setInterval(function(){
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-
-    </body>
+        document.getElementById("CountdownTimer").innerHTML = seconds + "s";
+        if(distance < 0){
+            clearInterval(x);
+            document.getElementById("CountdownTimer").innerHTML = "it's ya boi SeanningTatum";
+        }
+    },1000)
+  </script>
 </html>
-
-<script>
-var countDownDate =  new Date("July 16, 2018 10:45:00").getTime();
-var x = setInterval(function(){
-    var now = new Date().getTime();
-    var distance = countDownDate - now;
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    document.getElementById("CountdownTimer").innerHTML = seconds + "s";
-    if(distance < 0){
-        clearInterval(x);
-        document.getElementById("CountdownTimer").innerHTML = "it's ya boi SeanningTatum";
-    }
-},1000)
-
-</script>
