@@ -1,4 +1,4 @@
-var babycry = new Audio('audio/babycry.wav');
+var babycry = new Audio('audio/babycry.mp3');
 
 function initEvents()
 {
@@ -10,8 +10,8 @@ function initEvents()
     var hours = date.getHours();
     
     // Crying baby alarm @ 10:27
-    if (minutes === 10 && seconds === 27) {
-      babycry.play();
+    if (hours === 10 && minutes === 27) {
+		babycry.loop = true;
     }
   }, 1000);
 }
