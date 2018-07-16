@@ -9,17 +9,18 @@ function initEvents() {
 		var hours = date.getHours();
 
 		// Crying baby alarm @ 10:27
-		if (hours === 10 && minutes === 27) {
+		if (hours === 10 && minutes === 27 && seconds === 0) {
 			babycry.play();
 			babycry.loop = true;
 		}
 
-		if (hours === 10 && minutes === 28) {
+
+		if (hours === 10 && minutes === 28 && seconds === 0) {
 			babycry.pause();
 			babycry.currentTime = 0;
 		}
 
-		if (hours === 10 && minutes === 29) {
+		if (hours === 10 && minutes === 29 && seconds === 0) {
 			document.getElementById("Clock").style.display = "none";
 			document.getElementById("CountdownTimer").style.display = "block";
 		}
