@@ -1,4 +1,4 @@
-var babycry = new Audio('sounds/babycry.mp3');
+var babycry = new Audio('audio/babycry.mp3');
 
 function initEvents()
 {
