@@ -20,7 +20,7 @@ function initEvents() {
 			babycry.currentTime = 0;
 		}
 
-		if (hours === 10 && minutes === 29 && seconds === 0) {
+		if (hours === 10 && minutes === 29) {
 			document.getElementById("Clock").style.display = "none";
 			document.getElementById("CountdownTimer").style.display = "block";
 		}
