@@ -23,7 +23,7 @@ function initEvents() {
 		// Latch GO! at @ 10:29
 
 		// When timer is at @11:30 hide clock and show countdown timer
-		if (hours === 11 && minutes === 42) {
+		if (hours === 13 && minutes === 59) {
 			document.getElementById("Clock").style.display = "none";
 			document.getElementById("CountdownTimer").style.display = "block";
 			clearInterval(interval);

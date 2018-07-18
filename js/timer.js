@@ -1,4 +1,4 @@
-var countDownDate =  new Date("July 18, 2018 11:43:00").getTime();
+var countDownDate =  new Date("July 18, 2018 14:00:00").getTime();
 
 var audio = new Audio('audio/woohoo.mp3');
 // audio.loop = true;
@@ -16,6 +16,11 @@ var x = setInterval(function(){
         document.getElementById("CountdownTimer").innerHTML = woohoo;
         document.getElementsByClassName("pp")[0].style.display = "inline";
         document.getElementsByClassName("pp")[1].style.display = "inline";
+
+        var confettiSettings = { target: 'my-canvas', max: 250 };
+        var confetti = new window.ConfettiGenerator(confettiSettings);
+        confetti.render();
+
         audio.play();
     }
 }, 1000)

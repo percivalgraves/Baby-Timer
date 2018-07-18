@@ -3,6 +3,13 @@
   src: url(../fonts/leafy.otf)
 }
 
+#my-canvas {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -100;
+}
+
 *, ::after, ::before {
   box-sizing: border-box;
   font-family: Leafy;
