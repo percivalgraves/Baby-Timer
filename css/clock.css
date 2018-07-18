@@ -31,6 +31,8 @@ body {
   position: relative;
   width: 45em;
   background-color: inherit;
+
+  display: none;
 }
 
 .clock.simple:after {
@@ -97,5 +99,6 @@ body {
 }
 /* Timer */
 #CountdownTimer{
-  display:none;
+  /* display:none; */
+  font-size: 18rem;
 }
