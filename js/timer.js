@@ -9,6 +9,7 @@ var x = setInterval(function(){
         clearInterval(x);
         document.getElementById("CountdownTimer").innerHTML = "Woohoo";
         var audio = new Audio('audio/woohoo.mp3');
+        audio.loop = true;
         audio.play();
     }
 },1000)

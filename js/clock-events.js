@@ -14,7 +14,7 @@ function initEvents() {
 			babycry.play();
 		}
 
-
+		// Pause baby crying @ 10:28
 		if (hours === 10 && minutes === 28 && !babycry.paused) {
 			babycry.pause();
 			babycry.currentTime = 0;
