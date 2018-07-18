@@ -1,12 +1,25 @@
+@font-face {
+  font-family: Leafy;
+  src: url(../fonts/leafy.otf)
+}
+
 *, ::after, ::before {
   box-sizing: border-box;
-  height: 100%;
+  font-family: Leafy;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #ee9ca7, #ffdde1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 /* Clock Face */
@@ -17,6 +30,7 @@
   height: 45em;
   position: relative;
   width: 45em;
+  background-color: inherit;
 }
 
 .clock.simple:after {
@@ -83,5 +97,5 @@
 }
 /* Timer */
 #CountdownTimer{
-display:none;
+  display:none;
 }
