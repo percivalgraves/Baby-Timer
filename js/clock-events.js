@@ -2,7 +2,7 @@ var babycry = new Audio('audio/babycry.mp3');
 babycry.loop = true;
 
 function initEvents() {
-	setInterval(() => {
+	const interval = setInterval(() => {
 		// Retrieve current time
 		var date = new Date();
 		var seconds = date.getSeconds();
@@ -20,9 +20,12 @@ function initEvents() {
 			babycry.currentTime = 0;
 		}
 
-		if (hours === 10 && minutes === 5) {
+		if (hours === 11 && minutes === 4) {
 			document.getElementById("Clock").style.display = "none";
 			document.getElementById("CountdownTimer").style.display = "block";
+			document.getElementsByClassName("pp")[0].style.display = "inline";
+			document.getElementsByClassName("pp")[1].style.display = "inline";
+			clearInterval(interval);
 		}
 	}, 1000);
 }
