@@ -12,7 +12,7 @@ var x = setInterval(function(){
     document.getElementById("CountdownTimer").innerHTML = seconds + "s";
     if(distance < 0){
         clearInterval(x);
-        document.getElementById("CountdownTimer").innerHTML = "Woohoo";
+        document.getElementById("CountdownTimer").innerHTML = "&#x1F389; Woohoo &#x1F389;";
         // audio.play();
     }
 },1000)
