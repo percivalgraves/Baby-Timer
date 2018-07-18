@@ -100,5 +100,13 @@ body {
 /* Timer */
 #CountdownTimer{
   /* display:none; */
-  font-size: 18rem;
+  font-size: 12rem;
+  font-weight: 800;
+  background: -webkit-linear-gradient(rgb(136, 64, 110), rgb(151, 15, 90));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pp {
+  font-size: 7.5rem;
 }
