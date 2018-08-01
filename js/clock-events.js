@@ -3,6 +3,12 @@ babycry.loop = true;
 
 var audio = new Audio('audio/woohoo.mp3');
 
+const colors = [
+	`-webkit-linear-gradient(to right, #fdc830, #f37335);\n
+	-webkit-background-clip: text;\n
+  -webkit-text-fill-color: transparent;`
+]
+
 function initEvents() {
 	const interval = setInterval(() => {
 		// Retrieve current time
@@ -11,7 +17,7 @@ function initEvents() {
 		var minutes = date.getMinutes();
 		var hours = date.getHours();
 
-		var now = new Date().getTime();
+		// var now = new Date().getTime();
 
 
 		// Crying baby alarm @ 10:27
@@ -26,13 +32,17 @@ function initEvents() {
 		}
 
 		// Blinking Latch GO! at @ 10:28
-		if (hours === 10 && minutes === 28) {
+		if (hours === 11 && minutes === 0) {
 			document.getElementById("CountdownTimer").innerHTML = "LATCH GO";
 
 			if (seconds % 2 == 0) {
 				document.getElementById("CountdownTimer").style.display = "block";
 			} else {
 				document.getElementById("CountdownTimer").style.display = "none";
+			}
+
+			if (seconds > 30) {
+				document.getElementById("CountdownTimer").style.background = colors[0];				
 			}
 		}
 
