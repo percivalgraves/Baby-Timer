@@ -3,24 +3,30 @@
   src: url(../fonts/leafy.otf)
 }
 
+@font-face {
+  font-family: Raleway;
+  src: url(../fonts/Raleway-Regular.ttf);
+}
+
 h1 {
   position: fixed;
   z-index: 1000;
-  bottom: -20px;
-  font-size: 3rem;
-  font-weight: 800;
-
+  bottom: -10px;
+  font-size: 2rem;
+  font-family: Raleway;
 }
 
 h1 > .color {
   background: -webkit-linear-gradient(rgb(136, 64, 110), rgb(151, 15, 90));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-family: Raleway;
 }
 
 .symph {
   color: #d63031;
-  font-size: 3rem;
+  font-size: 2rem;
+  font-family: Raleway;
 }
 
 #my-canvas {
