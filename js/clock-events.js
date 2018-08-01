@@ -13,22 +13,20 @@ function initEvents() {
 
 		var now = new Date().getTime();
 
-		console.log(seconds);
 
 		// Crying baby alarm @ 10:27
-		if (hours === 10 && minutes === 25 && babycry.paused) {
+		if (hours === 10 && minutes === 27 && babycry.paused) {
 			babycry.play();
 		}
 
 		// Pause baby crying @ 10:28
-		if (hours === 10 && minutes === 26 && !babycry.paused) {
+		if (hours === 10 && minutes === 28 && !babycry.paused) {
 			babycry.pause();
 			babycry.currentTime = 0;
 		}
 
 		// Blinking Latch GO! at @ 10:28
-		if (hours === 10 && minutes === 26) {
-			document.getElementById("Clock").style.display = "none";
+		if (hours === 10 && minutes === 28) {
 			document.getElementById("CountdownTimer").innerHTML = "LATCH GO";
 
 			if (seconds % 2 == 0) {
@@ -38,14 +36,17 @@ function initEvents() {
 			}
 		}
 
-		// When timer is at @11:30 hide clock and show countdown timer
-		if (hours === 10 && minutes === 27) {
+		// When timer is at @10:30 hide clock and show countdown timer
+		if (hours === 10 && minutes === 30) {
+			document.getElementById("Clock").style.display = "none";
 			document.getElementById("CountdownTimer").style.display = "block";
 			document.getElementById("CountdownTimer").innerHTML = 60 - seconds;
+			document.getElementById("CountdownTimer").style.fontSize = '25rem';
 		}
 
-		if(hours === 10 && minutes === 28) {
+		if(hours === 10 && minutes === 31) {
         clearInterval(interval);
+				document.getElementById("CountdownTimer").style.fontSize = '12rem';
         var woohoo = " Woohoo! ";
         document.getElementById("CountdownTimer").innerHTML = woohoo;
         document.getElementsByClassName("pp")[0].style.display = "inline";
