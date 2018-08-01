@@ -3,6 +3,9 @@ babycry.loop = true;
 
 var audio = new Audio('audio/woohoo.mp3');
 
+var buzzer = new Audio('audio/buzzer.mp3')
+buzzer.loop = true;
+
 const colors = [
 	`-webkit-linear-gradient(to right, #fdc830, #f37335);\n
 	-webkit-background-clip: text;\n
@@ -32,7 +35,7 @@ function initEvents() {
 		}
 
 		// Blinking Latch GO! at @ 10:28
-		if (hours === 11 && minutes === 0) {
+		if (hours === 10 && minutes === 28) {
 			document.getElementById("CountdownTimer").innerHTML = "LATCH GO";
 
 			if (seconds % 2 == 0) {
@@ -42,12 +45,15 @@ function initEvents() {
 			}
 
 			if (seconds > 30) {
-				document.getElementById("CountdownTimer").style.background = colors[0];				
+				document.getElementById("CountdownTimer").style.background = colors[0];		
+				buzzer.play();
 			}
 		}
 
 		// When timer is at @10:30 hide clock and show countdown timer
 		if (hours === 10 && minutes === 30) {
+			buzzer.pause();
+			buzzer.currentTime=0;
 			document.getElementById("Clock").style.display = "none";
 			document.getElementById("CountdownTimer").style.display = "block";
 			document.getElementById("CountdownTimer").innerHTML = 60 - seconds;
