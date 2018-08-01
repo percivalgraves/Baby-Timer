@@ -4,10 +4,13 @@ babycry.loop = true;
 var audio = new Audio('audio/woohoo.mp3');
 
 const colors = [
-	`-webkit-linear-gradient(to right, #fdc830, #f37335);\n
-	-webkit-background-clip: text;\n
-  -webkit-text-fill-color: transparent;`
+	'-webkit-linear-gradient(#fdc830, #f37335)',
+	'-webkit-linear-gradient(#a8ff78, #78ffd6)',
+	'-webkit-linear-gradient(#4e54c8, #8f94fb)',
+	'-webkit-linear-gradient(#11998e, #38ef7d)',
+	'-webkit-linear-gradient(#74ebd5, #acb6e5)'
 ]
+let ctr = 0;
 
 function initEvents() {
 	const interval = setInterval(() => {
@@ -32,7 +35,8 @@ function initEvents() {
 		}
 
 		// Blinking Latch GO! at @ 10:28
-		if (hours === 11 && minutes === 0) {
+		if (hours === 11 && minutes !== 0) {
+			document.getElementById("Clock").style.display = "none";
 			document.getElementById("CountdownTimer").innerHTML = "LATCH GO";
 
 			if (seconds % 2 == 0) {
@@ -40,9 +44,9 @@ function initEvents() {
 			} else {
 				document.getElementById("CountdownTimer").style.display = "none";
 			}
-
+			
 			if (seconds > 30) {
-				document.getElementById("CountdownTimer").style.background = colors[0];				
+				document.getElementById("CountdownTimer").style.background = colors[ctr++ % 6];		
 			}
 		}
 
